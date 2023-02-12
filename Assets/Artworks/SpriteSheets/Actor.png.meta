@@ -1,0 +1,873 @@
+fileFormatVersion: 2
+guid: 300ea1a5869382b43bf6149aba92c4db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PrototypeHero_0
+  - first:
+      213: 21300002
+    second: PrototypeHero_1
+  - first:
+      213: 21300004
+    second: PrototypeHero_2
+  - first:
+      213: 21300006
+    second: PrototypeHero_3
+  - first:
+      213: 21300008
+    second: PrototypeHero_4
+  - first:
+      213: 21300010
+    second: PrototypeHero_5
+  - first:
+      213: 21300012
+    second: PrototypeHero_6
+  - first:
+      213: 21300014
+    second: PrototypeHero_7
+  - first:
+      213: 21300016
+    second: PrototypeHero_8
+  - first:
+      213: 21300018
+    second: PrototypeHero_9
+  - first:
+      213: 21300020
+    second: PrototypeHero_10
+  - first:
+      213: 21300022
+    second: PrototypeHero_11
+  - first:
+      213: 21300024
+    second: PrototypeHero_12
+  - first:
+      213: 21300026
+    second: PrototypeHero_13
+  - first:
+      213: 21300028
+    second: PrototypeHero_14
+  - first:
+      213: 21300030
+    second: PrototypeHero_15
+  - first:
+      213: 21300032
+    second: PrototypeHero_16
+  - first:
+      213: 21300034
+    second: PrototypeHero_17
+  - first:
+      213: 21300036
+    second: PrototypeHero_18
+  - first:
+      213: 21300038
+    second: PrototypeHero_19
+  - first:
+      213: 21300040
+    second: PrototypeHero_20
+  - first:
+      213: 21300042
+    second: PrototypeHero_21
+  - first:
+      213: 21300044
+    second: PrototypeHero_22
+  - first:
+      213: 21300046
+    second: PrototypeHero_23
+  - first:
+      213: 21300048
+    second: PrototypeHero_24
+  - first:
+      213: 21300050
+    second: PrototypeHero_25
+  - first:
+      213: 21300052
+    second: PrototypeHero_26
+  - first:
+      213: 21300054
+    second: PrototypeHero_27
+  - first:
+      213: 21300056
+    second: PrototypeHero_28
+  - first:
+      213: 21300058
+    second: PrototypeHero_29
+  - first:
+      213: 21300060
+    second: PrototypeHero_30
+  - first:
+      213: 21300062
+    second: PrototypeHero_31
+  - first:
+      213: 21300064
+    second: PrototypeHero_32
+  - first:
+      213: 21300066
+    second: PrototypeHero_33
+  - first:
+      213: 21300068
+    second: PrototypeHero_34
+  - first:
+      213: 21300070
+    second: PrototypeHero_35
+  - first:
+      213: 21300072
+    second: PrototypeHero_36
+  - first:
+      213: 21300074
+    second: PrototypeHero_37
+  - first:
+      213: 21300076
+    second: PrototypeHero_38
+  - first:
+      213: 21300078
+    second: PrototypeHero_39
+  - first:
+      213: 21300080
+    second: PrototypeHero_40
+  - first:
+      213: 21300082
+    second: PrototypeHero_41
+  - first:
+      213: 21300084
+    second: PrototypeHero_42
+  - first:
+      213: 21300086
+    second: PrototypeHero_43
+  - first:
+      213: 21300088
+    second: PrototypeHero_44
+  - first:
+      213: 21300090
+    second: PrototypeHero_45
+  - first:
+      213: 21300092
+    second: PrototypeHero_46
+  - first:
+      213: 21300094
+    second: PrototypeHero_47
+  - first:
+      213: 21300096
+    second: PrototypeHero_48
+  - first:
+      213: 21300098
+    second: PrototypeHero_49
+  - first:
+      213: 21300100
+    second: PrototypeHero_50
+  - first:
+      213: 21300102
+    second: PrototypeHero_51
+  - first:
+      213: 21300104
+    second: PrototypeHero_52
+  - first:
+      213: 21300106
+    second: PrototypeHero_53
+  - first:
+      213: 21300108
+    second: PrototypeHero_54
+  - first:
+      213: 21300110
+    second: PrototypeHero_55
+  - first:
+      213: 21300112
+    second: PrototypeHero_56
+  - first:
+      213: 21300114
+    second: PrototypeHero_57
+  - first:
+      213: 21300116
+    second: PrototypeHero_58
+  - first:
+      213: 21300118
+    second: PrototypeHero_59
+  - first:
+      213: 21300120
+    second: PrototypeHero_60
+  - first:
+      213: 21300122
+    second: PrototypeHero_61
+  - first:
+      213: 21300124
+    second: PrototypeHero_62
+  - first:
+      213: 21300126
+    second: PrototypeHero_63
+  - first:
+      213: 21300128
+    second: PrototypeHero_64
+  - first:
+      213: 21300130
+    second: PrototypeHero_65
+  - first:
+      213: 21300132
+    second: PrototypeHero_66
+  - first:
+      213: 21300134
+    second: PrototypeHero_67
+  - first:
+      213: 21300136
+    second: PrototypeHero_68
+  - first:
+      213: 21300138
+    second: PrototypeHero_69
+  - first:
+      213: 21300140
+    second: PrototypeHero_70
+  - first:
+      213: 21300142
+    second: PrototypeHero_71
+  - first:
+      213: 21300144
+    second: PrototypeHero_72
+  - first:
+      213: 21300146
+    second: PrototypeHero_73
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Actor_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b67ea7d106082438e6d1174c5bbf1b
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba06cea6fc93a44c8f5c3d4cd74793b
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4831c8ab808a253429fd2a74919df026
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed987d1bc285d9f47bd06fa0356b88cb
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095e6fbc94feaa84d962e6d7687db121
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5292f6e39d783c9419f25e18be6a13df
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_RunStart_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b09643610f29e54db8b8b8e497104c0
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_RunStart_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18b9f6efbaab044ba33a97f92ba9510
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eb4925467d279488f5c5b7f1d9eea8
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b8fed9377eb9f42acab19a18892e97
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75d84d53e346f64d8c17126923425ed
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0df2c7c4bddfdd48aa8a24c07e8eccc
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4aef0ded01e5e439e93318d486ee05
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5279401befe738e4daa2aeb795abf75c
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f4e08ba5f13f44692d1f8bbb4f5d23
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Run_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443785533a254064c8abbc5dd9d12cd2
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_RunStop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a104c0deac058469f79d65346fb5ef
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_RunStop_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1631d7dedfdf3de4e89963ea3d2dc244
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_RunStop_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bdeac2ea3361c40a1636126f765309
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae4a77c06ca74d4eb2a53241273960c
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_JumpToFall_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b8e95feacbe5f45af9f2371d19a9ea
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_JumpToFall_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd894805e5eb7964f842cce46f387e50
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_JumpToFall_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bc2125fd0558949bdeb4ad7683de51
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_Fall_0
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8ec48ff02959b4981ec48a293525b7
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 45435ba8bfd82894680bf60f3c9cc345
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Actor_Idle_3: 21300006
+      Actor_Run_1: 21300018
+      Actor_Idle_5: 21300010
+      Actor_JumpToFall_1: 21300042
+      Actor_Run_2: 21300020
+      Actor_RunStop_1: 21300034
+      Actor_RunStop_2: 21300036
+      Actor_Idle_1: 21300002
+      Actor_Run_0: 21300016
+      Actor_RunStop_0: 21300032
+      Actor_Fall_0: 21300046
+      Actor_Run_7: 21300030
+      Actor_Jump_0: 21300038
+      Actor_RunStart_0: 21300012
+      Actor_Run_3: 21300022
+      Actor_Run_5: 21300026
+      Actor_Run_6: 21300028
+      Actor_JumpToFall_0: 21300040
+      Actor_JumpToFall_2: 21300044
+      Actor_Run_4: 21300024
+      Actor_Idle_0: 21300000
+      Actor_Idle_2: 21300004
+      Actor_Idle_4: 21300008
+      Actor_RunStart_1: 21300014
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

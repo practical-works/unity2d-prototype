@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 0409f2fddf07780408257c186ab69681
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PrototypeHero_noSword_0
+  - first:
+      213: 21300002
+    second: PrototypeHero_noSword_1
+  - first:
+      213: 21300004
+    second: PrototypeHero_noSword_2
+  - first:
+      213: 21300006
+    second: PrototypeHero_noSword_3
+  - first:
+      213: 21300008
+    second: PrototypeHero_noSword_4
+  - first:
+      213: 21300010
+    second: PrototypeHero_noSword_5
+  - first:
+      213: 21300012
+    second: PrototypeHero_noSword_6
+  - first:
+      213: 21300014
+    second: PrototypeHero_noSword_7
+  - first:
+      213: 21300016
+    second: PrototypeHero_noSword_8
+  - first:
+      213: 21300018
+    second: PrototypeHero_noSword_9
+  - first:
+      213: 21300020
+    second: PrototypeHero_noSword_10
+  - first:
+      213: 21300022
+    second: PrototypeHero_noSword_11
+  - first:
+      213: 21300024
+    second: PrototypeHero_noSword_12
+  - first:
+      213: 21300026
+    second: PrototypeHero_noSword_13
+  - first:
+      213: 21300028
+    second: PrototypeHero_noSword_14
+  - first:
+      213: 21300030
+    second: PrototypeHero_noSword_15
+  - first:
+      213: 21300032
+    second: PrototypeHero_noSword_16
+  - first:
+      213: 21300034
+    second: PrototypeHero_noSword_17
+  - first:
+      213: 21300036
+    second: PrototypeHero_noSword_18
+  - first:
+      213: 21300038
+    second: PrototypeHero_noSword_19
+  - first:
+      213: 21300040
+    second: PrototypeHero_noSword_20
+  - first:
+      213: 21300042
+    second: PrototypeHero_noSword_21
+  - first:
+      213: 21300044
+    second: PrototypeHero_noSword_22
+  - first:
+      213: 21300046
+    second: PrototypeHero_noSword_23
+  - first:
+      213: 21300048
+    second: PrototypeHero_noSword_24
+  - first:
+      213: 21300050
+    second: PrototypeHero_noSword_25
+  - first:
+      213: 21300052
+    second: PrototypeHero_noSword_26
+  - first:
+      213: 21300054
+    second: PrototypeHero_noSword_27
+  - first:
+      213: 21300056
+    second: PrototypeHero_noSword_28
+  - first:
+      213: 21300058
+    second: PrototypeHero_noSword_29
+  - first:
+      213: 21300060
+    second: PrototypeHero_noSword_30
+  - first:
+      213: 21300062
+    second: PrototypeHero_noSword_31
+  - first:
+      213: 21300064
+    second: PrototypeHero_noSword_32
+  - first:
+      213: 21300066
+    second: PrototypeHero_noSword_33
+  - first:
+      213: 21300068
+    second: PrototypeHero_noSword_34
+  - first:
+      213: 21300070
+    second: PrototypeHero_noSword_35
+  - first:
+      213: 21300072
+    second: PrototypeHero_noSword_36
+  - first:
+      213: 21300074
+    second: PrototypeHero_noSword_37
+  - first:
+      213: 21300076
+    second: PrototypeHero_noSword_38
+  - first:
+      213: 21300078
+    second: PrototypeHero_noSword_39
+  - first:
+      213: 21300080
+    second: PrototypeHero_noSword_40
+  - first:
+      213: 21300082
+    second: PrototypeHero_noSword_41
+  - first:
+      213: 21300084
+    second: PrototypeHero_noSword_42
+  - first:
+      213: 21300086
+    second: PrototypeHero_noSword_43
+  - first:
+      213: 21300088
+    second: PrototypeHero_noSword_44
+  - first:
+      213: 21300090
+    second: PrototypeHero_noSword_45
+  - first:
+      213: 21300092
+    second: PrototypeHero_noSword_46
+  - first:
+      213: 21300094
+    second: PrototypeHero_noSword_47
+  - first:
+      213: 21300096
+    second: PrototypeHero_noSword_48
+  - first:
+      213: 21300098
+    second: PrototypeHero_noSword_49
+  - first:
+      213: 21300100
+    second: PrototypeHero_noSword_50
+  - first:
+      213: 21300102
+    second: PrototypeHero_noSword_51
+  - first:
+      213: 21300104
+    second: PrototypeHero_noSword_52
+  - first:
+      213: 21300106
+    second: PrototypeHero_noSword_53
+  - first:
+      213: 21300108
+    second: PrototypeHero_noSword_54
+  - first:
+      213: 21300110
+    second: PrototypeHero_noSword_55
+  - first:
+      213: 21300112
+    second: PrototypeHero_noSword_56
+  - first:
+      213: 21300114
+    second: PrototypeHero_noSword_57
+  - first:
+      213: 21300116
+    second: PrototypeHero_noSword_58
+  - first:
+      213: 21300118
+    second: PrototypeHero_noSword_59
+  - first:
+      213: 21300120
+    second: PrototypeHero_noSword_60
+  - first:
+      213: 21300122
+    second: PrototypeHero_noSword_61
+  - first:
+      213: 21300124
+    second: PrototypeHero_noSword_62
+  - first:
+      213: 21300126
+    second: PrototypeHero_noSword_63
+  - first:
+      213: 21300128
+    second: PrototypeHero_noSword_64
+  - first:
+      213: 21300130
+    second: PrototypeHero_noSword_65
+  - first:
+      213: 21300132
+    second: PrototypeHero_noSword_66
+  - first:
+      213: 21300134
+    second: PrototypeHero_noSword_67
+  - first:
+      213: 21300136
+    second: PrototypeHero_noSword_68
+  - first:
+      213: 21300138
+    second: PrototypeHero_noSword_69
+  - first:
+      213: 21300140
+    second: PrototypeHero_noSword_70
+  - first:
+      213: 21300142
+    second: PrototypeHero_noSword_71
+  - first:
+      213: 21300144
+    second: PrototypeHero_noSword_72
+  - first:
+      213: 21300146
+    second: PrototypeHero_noSword_73
+  - first:
+      213: 21300148
+    second: PrototypeHero_noSword_74
+  - first:
+      213: 21300150
+    second: PrototypeHero_noSword_75
+  - first:
+      213: 21300152
+    second: PrototypeHero_noSword_76
+  - first:
+      213: 21300154
+    second: PrototypeHero_noSword_77
+  - first:
+      213: 21300156
+    second: PrototypeHero_noSword_78
+  - first:
+      213: 21300158
+    second: PrototypeHero_noSword_79
+  - first:
+      213: 21300160
+    second: PrototypeHero_noSword_80
+  - first:
+      213: 21300162
+    second: PrototypeHero_noSword_81
+  - first:
+      213: 21300164
+    second: PrototypeHero_noSword_82
+  - first:
+      213: 21300166
+    second: PrototypeHero_noSword_83
+  - first:
+      213: 21300168
+    second: PrototypeHero_noSword_84
+  - first:
+      213: 21300170
+    second: PrototypeHero_noSword_85
+  - first:
+      213: 21300172
+    second: PrototypeHero_noSword_86
+  - first:
+      213: 21300174
+    second: PrototypeHero_noSword_87
+  - first:
+      213: 21300176
+    second: PrototypeHero_noSword_88
+  - first:
+      213: 21300178
+    second: PrototypeHero_noSword_89
+  - first:
+      213: 21300180
+    second: PrototypeHero_noSword_90
+  - first:
+      213: 21300182
+    second: PrototypeHero_noSword_91
+  - first:
+      213: 21300184
+    second: PrototypeHero_noSword_92
+  - first:
+      213: 21300186
+    second: PrototypeHero_noSword_93
+  - first:
+      213: 21300188
+    second: PrototypeHero_noSword_94
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39732140cd55c1142be40060794c8b6e
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f988021184251024ab8750d76780c3c0
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a409739b3ceba3841a9e5eb1d48f5e7d
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16f5afd463c179489676d6d18ee33ab
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6943233c66af274dadd5eace5d741a8
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6c37bf4a167a940bfd0860ed82cde1
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_RunStart_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944bedee3a5566045a18e80adb784854
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_RunStart_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 160
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b3b6b8ee648db4a9e51535be61cb5c
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec8488cefcee7645b5db27c0b770b3d
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae72e1a1031f1741bd9654dbd5ceb72
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f9ccd34b81cea4b81079723fa65dda
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3023634543ec6d44a65bdcf7842cc3b
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a99f30e87e85c14c99ea2dd85eacc99
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4ddae3907b8654a8651b4d7f18b675
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4482694d56948c40aec91c6b55a5059
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Run_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 80
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbb7634afbfee3489b9c45974fa60ae
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_RunStop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ce927ecc111df45bc930914a4bcc68
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_RunStop_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d66b501fa10c3942b0074a146f83792
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_RunStop_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f7cfc488e06434089f037f7b9d4960
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee39c8bd0ed83b4d89c9ab96e0c5420
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_JumpToFall_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d9f603758d00b4d98f857644dc9176
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_JumpToFall_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130aafc7a1b43124baaae5f0250fff78
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_JumpToFall_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee069c8ed1781f1419c09361aaa20475
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Actor_NoSword_Fall_0
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d856b66fb7e15f4b870781c0dcc9188
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bd7e38733f67f1d48a1b77dd337c8077
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Actor_NoSword_JumpToFall_1: 21300042
+      Actor_NoSword_Idle_5: 21300010
+      Actor_NoSword_RunStart_1: 21300014
+      Actor_NoSword_Idle_4: 21300008
+      Actor_NoSword_Run_3: 21300022
+      Actor_NoSword_RunStart_0: 21300012
+      Actor_NoSword_Run_4: 21300024
+      Actor_NoSword_Run_7: 21300030
+      Actor_NoSword_Idle_3: 21300006
+      Actor_NoSword_Run_6: 21300028
+      Actor_NoSword_RunStop_0: 21300032
+      Actor_NoSword_JumpToFall_2: 21300044
+      Actor_NoSword_Fall_0: 21300046
+      Actor_NoSword_Jump_0: 21300038
+      Actor_NoSword_Run_0: 21300016
+      Actor_NoSword_RunStop_1: 21300034
+      Actor_NoSword_Idle_2: 21300004
+      Actor_NoSword_Idle_0: 21300000
+      Actor_NoSword_Idle_1: 21300002
+      Actor_NoSword_Run_1: 21300018
+      Actor_NoSword_Run_2: 21300020
+      Actor_NoSword_RunStop_2: 21300036
+      Actor_NoSword_Run_5: 21300026
+      Actor_NoSword_JumpToFall_0: 21300040
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
