@@ -214,14 +214,27 @@ MonoBehaviour:
   ObstacleLayers:
     serializedVersion: 2
     m_Bits: 8
+  ActorLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  WallDetectorEnabled: 1
   WallDetectorLine:
     Transform: {fileID: 2937583847140123816}
     LocalStart: {x: 0, y: 0.2, z: 0}
     LocalEnd: {x: 1, y: 0.2, z: 0}
+  FloorDetectorEnabled: 1
   FloorDetectorLine:
     Transform: {fileID: 2937583847140123816}
     LocalStart: {x: 0, y: 0.2, z: 0}
     LocalEnd: {x: 2, y: 0, z: 0}
+  ActorDetectorEnabled: 1
+  ActorSpottingSeconds: 10
+  ActorDetectorLine:
+    Transform: {fileID: 2937583847140123816}
+    LocalStart: {x: 0, y: 1.3, z: 0}
+    LocalEnd: {x: 3, y: 1.3, z: 0}
+  Projectile: {fileID: 857012826415458340, guid: 760a777be9d960847bef87f9fb21626d, type: 3}
+  ProjectileForce: 10
 --- !u!114 &6308550479266729602
 MonoBehaviour:
   m_ObjectHideFlags: 0

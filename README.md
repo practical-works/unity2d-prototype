@@ -14,7 +14,7 @@ It features some basic 2D platformer stuff for unity.
     - [x] Horizontal Movement Logic.
     - [x] Vertical Movement (Jump) Logic.
     - [x] Movement Animations.
-- [x] 🚪 Switches and Doors Mechanism.
+- [x] 🚪 Switches and Doors Mechanism:
     - [x] Switch Logic and Animations.
     - [x] Door Logic and Animations.
     - [x] Switch for Multiple Doors Support.
@@ -26,7 +26,8 @@ It features some basic 2D platformer stuff for unity.
     - [x] Automated Horizontal Movement Logic.
     - [x] Wall Detection for Turning Round.
     - [x] Floor Detection for Gap Avoidance.
-    - [ ] Automated Attack.
+    - [x] Player Detection for Chase.
+    - [ ] Automated Projectile Throwing.
 
 ## 🏭 Environment
 

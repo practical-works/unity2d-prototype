@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2937583847140123821}
   - component: {fileID: 2937583847140123820}
   - component: {fileID: 2762353953833276241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -228,4 +228,5 @@ MonoBehaviour:
   DamageSourcesTags:
   - Damage
   - Enemy
+  DamageInvincibilitySeconds: 0.5
   DamagedAnimStateName: Actor_Damaged
