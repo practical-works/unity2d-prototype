@@ -42,7 +42,6 @@ public class Platformer2DAutomator : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_platformer2D.IsFalling) _platformer2D.Move(MovementDirection);
-        if (FollowActor != ActorFollowingMode.Never) TurnRoundAtWall = TurnRoundAtNoFloor = false;
         if (TurnRoundAtWall && _wallDetectorLine2D.ObstacleDetection) InvertMovementDirection();
         if (TurnRoundAtNoFloor && !_floorDetectorLine2D.ObstacleDetection) InvertMovementDirection();
         if (FollowActor == ActorFollowingMode.Always && ActorTransform) MoveTowardsActor();

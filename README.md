@@ -6,7 +6,8 @@
 This is a sample **2D Platformer Game** unity project for learning and prototyping purposes.<br />
 It features some basic 2D platformer stuff for unity.
 
-![Screenshot](./screenshot.gif)
+![Screenshot1](./Screenshot1.gif)
+![Screenshot2](./Screenshot2.gif)
 
 ## 🎯 Objectives
 
