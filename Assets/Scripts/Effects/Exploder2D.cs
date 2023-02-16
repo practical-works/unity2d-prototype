@@ -3,17 +3,19 @@ using UnityEngine;
 
 public class Exploder2D : MonoBehaviour
 {
-    public GameObject Fragment;
-    public int ShrapnelsCount = 5;
-    [Header("Physics")]
-    public Vector2 ForceMin = new(-100, 100);
-    public Vector2 ForceMax = new(100, 300);
-    [Header("Cleanup")]
     public bool DestroyGameObject = true;
+    [Header("Shrapnels")]
+    public GameObject Shrapnel;
+    public int ShrapnelsCount = 5;
+    [Header("Shrapnels / Cleanup")]
     public bool DestroyShrapnels = true;
     public float ShrapnelLifeSeconds = 2f;
-    public bool FadeOutEffect = true;
-    public float FadeOutSeconds = 3f;
+    [Header("Shrapnels / Cleanup / Fade Out")]
+    public bool ShrapnelFadeOut = true;
+    public float ShrapnelFadeOutSeconds = 3f;
+    [Header("Physics")]
+    public Vector2 ExplosionForceMin = new(-100, 100);
+    public Vector2 ExplosionForceMax = new(100, 300);
 
     private SpriteRenderer _spriteRenderer;
 
@@ -34,7 +36,7 @@ public class Exploder2D : MonoBehaviour
     {
         Vector3 position = (_spriteRenderer || TryGetComponent(out _spriteRenderer)) ? 
             _spriteRenderer.bounds.center : transform.position;
-        GameObject shrapnel = Instantiate(Fragment, position, Quaternion.identity);
+        GameObject shrapnel = Instantiate(Shrapnel, position, Quaternion.identity);
         SpriteRenderer shrapnelSpriteRenderer = shrapnel.GetComponent<SpriteRenderer>();
         Rigidbody2D shrapnelRigidBody2D = shrapnel.GetComponent<Rigidbody2D>();
         return (shrapnel, shrapnelSpriteRenderer, shrapnelRigidBody2D);
@@ -48,27 +50,14 @@ public class Exploder2D : MonoBehaviour
 
     private void PushAwayShrapnel(Rigidbody2D shrapnelRigidBody2D)
     {
-        shrapnelRigidBody2D.AddForce(Vector2.right * Random.Range(ForceMin.x, ForceMax.x));
-        shrapnelRigidBody2D.AddForce(Vector2.up * Random.Range(ForceMin.y, ForceMax.y));
+        shrapnelRigidBody2D.AddForce(Vector2.right * Random.Range(ExplosionForceMin.x, ExplosionForceMax.x));
+        shrapnelRigidBody2D.AddForce(Vector2.up * Random.Range(ExplosionForceMin.y, ExplosionForceMax.y));
     }
 
     private IEnumerator DisposeShrapnel(SpriteRenderer shrapnelSpriteRenderer)
     {
         yield return new WaitForSeconds(ShrapnelLifeSeconds);
-        if (FadeOutEffect) yield return FadeOutShrapnel(shrapnelSpriteRenderer);
-        Destroy(shrapnelSpriteRenderer.gameObject);
-    }
-
-    private IEnumerator FadeOutShrapnel(SpriteRenderer shrapnelSpriteRenderer)
-    {
-        Color initialColor = shrapnelSpriteRenderer.color;
-        Color finalColor = new(initialColor.r, initialColor.g, initialColor.b, 0f);
-        float i = 0f;
-        while (shrapnelSpriteRenderer.color.a > 0f)
-        {
-            yield return new WaitForEndOfFrame();
-            i += Time.deltaTime / FadeOutSeconds;
-            shrapnelSpriteRenderer.color = Color.Lerp(initialColor, finalColor, i);
-        }
+        if (ShrapnelFadeOut) SpriteFader.FadeOut(shrapnelSpriteRenderer, ShrapnelFadeOutSeconds, () => Destroy(shrapnelSpriteRenderer.gameObject));
+        else Destroy(shrapnelSpriteRenderer.gameObject);
     }
 }

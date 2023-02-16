@@ -192,15 +192,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9e633862d7c3a4d9d5967c125388fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fragment: {fileID: 857012826415458340, guid: 760a777be9d960847bef87f9fb21626d, type: 3}
-  ShrapnelsCount: 5
-  ForceMin: {x: -100, y: 100}
-  ForceMax: {x: 100, y: 300}
   DestroyGameObject: 1
+  Shrapnel: {fileID: 857012826415458340, guid: 760a777be9d960847bef87f9fb21626d, type: 3}
+  ShrapnelsCount: 5
   DestroyShrapnels: 1
   ShrapnelLifeSeconds: 2
-  FadeOutEffect: 1
-  FadeOutSeconds: 3
+  ShrapnelFadeOut: 1
+  ShrapnelFadeOutSeconds: 3
+  ExplosionForceMin: {x: -100, y: 100}
+  ExplosionForceMax: {x: 100, y: 300}
 --- !u!114 &6308550479266729602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
   Health: 3
   DamageSourcesTags:
   - Damage
+  - PlayerDamage
   DamageInvincibilitySeconds: 0.5
   DamagedAnimStateName: Actor_Damaged
 --- !u!114 &8235688696540468036
@@ -285,5 +286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementDirection: 1
+  TurnRoundAtWall: 1
+  TurnRoundAtNoFloor: 1
+  FollowActor: 2
+  ActorFollowSeconds: 10
+  ActorFollowStartDistance: 0.1
+  ActorTransform: {fileID: 0}
   WallDetectorID: Wall
-  FloorlDetectorID: Floor
+  FloorDetectorID: Floor
+  ActorDetectorID: Actor

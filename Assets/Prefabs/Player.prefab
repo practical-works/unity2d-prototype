@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 2937583847140123821}
   - component: {fileID: 2937583847140123820}
   - component: {fileID: 2762353953833276241}
+  - component: {fileID: 1609628864}
+  - component: {fileID: 1609628865}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -31,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2937583847140123861}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -189,15 +191,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9e633862d7c3a4d9d5967c125388fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fragment: {fileID: 857012826415458340, guid: 760a777be9d960847bef87f9fb21626d, type: 3}
-  ShrapnelsCount: 5
-  ForceMin: {x: -100, y: 100}
-  ForceMax: {x: 100, y: 300}
   DestroyGameObject: 1
+  Shrapnel: {fileID: 857012826415458340, guid: 760a777be9d960847bef87f9fb21626d, type: 3}
+  ShrapnelsCount: 5
   DestroyShrapnels: 1
   ShrapnelLifeSeconds: 2
-  FadeOutEffect: 1
-  FadeOutSeconds: 3
+  ShrapnelFadeOut: 1
+  ShrapnelFadeOutSeconds: 3
+  ExplosionForceMin: {x: -100, y: 100}
+  ExplosionForceMax: {x: 100, y: 300}
 --- !u!114 &2937583847140123820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,5 +230,38 @@ MonoBehaviour:
   DamageSourcesTags:
   - Damage
   - Enemy
+  - EnemyDamage
   DamageInvincibilitySeconds: 0.5
   DamagedAnimStateName: Actor_Damaged
+--- !u!114 &1609628864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937583847140123861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b045b83d4eaa24ba818ede61bea2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowButtonName: Fire3
+--- !u!114 &1609628865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937583847140123861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc4df7ab361c094fb1d0d18a1fc140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 7209359938588711938, guid: cdd79a23370819e4a9faa1ff98673d68, type: 3}
+  ProjectileLocalScale: {x: 0.5, y: 0.5, z: 1}
+  ThrowingLocalOrigin: {x: 0.25, y: 1, z: 0}
+  ThrowingForce: {x: 10, y: 0, z: 0}
+  UsePhysics2D: 1
+  AutoThrow: 0
+  AutoThrowDelaySeconds: 1

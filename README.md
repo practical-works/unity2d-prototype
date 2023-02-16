@@ -12,23 +12,24 @@ It features some basic 2D platformer stuff for unity.
 ## 🎯 Objectives
 
 - [x] 🏃 Platformer Movement:
-    - [x] Horizontal Movement Logic.
-    - [x] Vertical Movement (Jump) Logic.
+    - [x] Horizontal Movement.
+    - [x] Vertical Movement (Jump).
     - [x] Movement Animations.
 - [x] 🚪 Switches and Doors Mechanism:
-    - [x] Switch Logic and Animations.
-    - [x] Door Logic and Animations.
+    - [x] Switch Mechanism with Animations.
+    - [x] Door Mechanism with Animations.
     - [x] Switch for Multiple Doors Support.
     - [x] Door with Multiple Switches Support.
-- [x] 💥 Damage:
+- [x] 💥 Combat:
     - [x] Explosion Effect.
     - [x] Damage Animations.
-- [ ] 🤖 Enemy AI Platformer Movement:
-    - [x] Automated Horizontal Movement Logic.
+    - [x] Projectile Throwing.
+- [x] 🤖 Enemy AI Platformer Movement:
+    - [x] Automated Horizontal Movement.
     - [x] Wall Detection for Turning Round.
     - [x] Floor Detection for Gap Avoidance.
     - [x] Player Detection for Chase.
-    - [ ] Automated Projectile Throwing.
+    - [x] Automated Projectile Throwing.
 
 ## 🏭 Environment
 
