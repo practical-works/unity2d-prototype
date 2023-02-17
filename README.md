@@ -30,6 +30,9 @@ It features some basic 2D platformer stuff for unity.
     - [x] Floor Detection for Gap Avoidance.
     - [x] Player Detection for Chase.
     - [x] Automated Projectile Throwing.
+- [x] 🎥 Camera
+    - [x] Player Follower Camera.
+    - [x] Smooth Camera Movement.
 
 ## 🏭 Environment
 
