@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 7209359938588711938, guid: cdd79a23370819e4a9faa1ff98673d68, type: 3}
   ProjectileLocalScale: {x: 0.5, y: 0.5, z: 1}
-  ThrowingLocalOrigin: {x: 0.25, y: 1, z: 0}
+  ThrowingLocalOrigin: {x: 0, y: 1, z: 0}
   ThrowingForce: {x: 10, y: 0, z: 0}
   UsePhysics2D: 1
   AutoThrow: 0

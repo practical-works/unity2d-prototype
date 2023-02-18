@@ -291,7 +291,7 @@ MonoBehaviour:
   FollowActor: 2
   ActorFollowSeconds: 10
   ActorFollowStartDistance: 0.1
-  ActorTransform: {fileID: 0}
+  ActorTransform: {fileID: 2937583847140123816, guid: 2447edcb9abb02b4b80a02ae6cb1ff6c, type: 3}
   WallDetectorID: Wall
   FloorDetectorID: Floor
   ActorDetectorID: Actor

@@ -14,13 +14,14 @@ public class Camera2DController : MonoBehaviour
     private Vector3 _initialPosition;
     private float _elapsedTime;
 
-    public Vector3 TargetPosition => 
-        new Vector3(TargetTransform.position.x, TargetTransform.position.y, transform.position.z) + (Vector3)Offset;
-    public bool TargetPositionIsDifferent => TargetPosition != transform.position; 
+    public Vector3 TargetPosition => TargetTransform 
+        ? new Vector3(TargetTransform.position.x, TargetTransform.position.y, transform.position.z) + (Vector3)Offset
+        : transform.position;
+    public bool TargetPositionIsDifferent => TargetTransform  && TargetPosition != transform.position;
 
     private void LateUpdate()
     {
-        if (FollowTarget && TargetTransform is not null && TargetPositionIsDifferent)
+        if (FollowTarget && TargetTransform && TargetPositionIsDifferent)
         {
             if (Easing) FollowTargetWithEasing();
             else FollowTargetDirectly();
@@ -30,7 +31,6 @@ public class Camera2DController : MonoBehaviour
     private void FollowTargetWithEasing()
     {
         if (_initialPosition == default) _initialPosition = transform.position;
-        Debug.Log($"Elapsed Time : {_elapsedTime}");
         _elapsedTime += Time.deltaTime;
         transform.position = Vector3.Lerp(_initialPosition, TargetPosition, Easings.Perform(_elapsedTime / EasingSeconds, EasingMethod));
         if (_elapsedTime < EasingSeconds) 
@@ -54,7 +54,6 @@ public class Camera2DController : MonoBehaviour
         _elapsedTime = 0f;
         _initialPosition = default;
         transform.position = new Vector3(0f, 0f, transform.position.z);
-        Debug.Log($"[Reset] Elapsed Time : {_elapsedTime}");
     }
 
     private void OnDrawGizmos()
