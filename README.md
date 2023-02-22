@@ -15,7 +15,8 @@ It features some basic 2D game stuff for unity.
     - [x] **🏃 Platformer Movement _using [Physics 2D](https://docs.unity3d.com/Manual/Physics2DReference.html)_:**
         - [x] Horizontal Movement.
         - [x] Vertical Movement (Jump).
-    - [x] **🎞️ Movement Animations using [Animator](https://docs.unity3d.com/Manual/AnimatorWindow.html).**
+    - [x] **🎞️ Movement Animations _using [Animator](https://docs.unity3d.com/Manual/AnimatorWindow.html) Parameters_.**
+    - [x] **🎞️ Movement-Dust-Effects Animations _by [Instantiating Objects](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) and using [Animator](https://docs.unity3d.com/Manual/AnimatorWindow.html) States Names_.**
 
 - [x] 🔌 **Mechanism:**
     - 🚪 **Switches and Doors Mechanism:**
@@ -26,7 +27,7 @@ It features some basic 2D game stuff for unity.
 - [x] 🤺 **Combat:**
     - [x] **💥 Explosion Effect _using [Physics 2D](https://docs.unity3d.com/Manual/Physics2DReference.html)_.** 
     - [x] **🎞️ Damage Animations.**
-    - [x] **🏹 Projectile Throwing by [Instantiating Objects](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html).**
+    - [x] **🏹 Projectile Throwing _by [Instantiating Objects](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html)_ and _using [Animator](https://docs.unity3d.com/Manual/AnimatorWindow.html) Parameters_.**
 
 - [x] **🤖 Artificial Intelligence (AI):**
     - **🏃 Automated Platformer Movement:**
@@ -45,14 +46,15 @@ It features some basic 2D game stuff for unity.
     - [x] **🎥 Camera:**
         - [x] Player-Follower Camera.
         - [x] Smooth Camera Movement _using [Linear interpolation (Lerp)](https://en.wikipedia.org/wiki/Linear_interpolation)_.
-        - [x] Pixel Perfect Camera _using [Pixel Perfect Camera Component](https://docs.unity3d.com/Packages/com.unity.2d.pixel-perfect@1.0/manual/index.html)_.
+        - [x] Pixel Perfect Camera _using [Pixel Perfect Camera Component](https://docs.unity3d.com/Packages/com.unity.2d.pixel-perfect@4.0/manual/index.html)_.
+        - [x] Pixel Perfect Camera _using [Pixel Perfect Camera Component](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/2d-pixelperfect.html) of [Universal Render Pipeline (URP)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/index.html)_.
     - [x] **💡 Light:**
         - [x] Lighting _using [Light Components](https://docs.unity3d.com/Manual/Lights.html) (3D)_.
-        - [x] Lighting _using [Light 2D Components](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/Lights-2D-intro.html) through [Universal Render Pipeline (URP)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/index.html)_.
-    - [ ] **📣 Sound:**
-        - [ ] Background Music.
-        - [ ] Background Sound.
-        - [ ] Sound Effects.
+        - [x] Lighting _using [Light 2D Components](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/Lights-2D-intro.html) of [Universal Render Pipeline (URP)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/index.html)_.
+    - [ ] **📣 Audio _using [Audio Source Component](https://docs.unity3d.com/Manual/class-AudioSource.html)_:**
+        - [x] Background Music (BGM).
+        - [x] Sound Effects (SFX).
+        - [x] Distance-Relative Audio _using 3D Sound Settings of [Audio Source Component](https://docs.unity3d.com/Manual/class-AudioSource.html)_.
 
 - [ ] **🔲 User Interface (UI):**
     - [ ] **💯 Head-Up Display (HUD):**

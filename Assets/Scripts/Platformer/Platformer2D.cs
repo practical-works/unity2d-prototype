@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(AudioSource))]
 public class Platformer2D : MonoBehaviour
 {
     [Header("Movement")]
@@ -16,8 +16,25 @@ public class Platformer2D : MonoBehaviour
     public string JumpingAnimBoolParamName = "Jumping";
     public string FallingAnimBoolParamName = "Falling";
 
+    [Header("Dust Effect")]
+    public GameObject Dust;
+    public string MovingStartDustAnimStateName = "Dust_OnRunStart";
+    public string StoppingDustAnimStateName = "Dust_OnRunStop";
+    public string JumpingDustAnimStateName = "Dust_OnJump";
+    public string LandingDustAnimStateName = "Dust_OnFall";
+    [Header("Dust Effect / Offsets")]
+    public float MovingStartDustOffset = -0.3f;
+    public float StoppingDustOffset = 0.3f;
+
+    [Header("Audio")]
+    public bool AudioEnabled = true;
+    public AudioClip[] MovingSoundFXs;
+    public AudioClip JumpingSoundFX;
+    public AudioClip LandingSoundFX;
+
     private Rigidbody2D _rigidBody2D;
     private Animator _animator;
+    private AudioSource _audioSource;
     private float _originalDrag;
 
     public bool IsMoving => Mathf.Abs(_rigidBody2D.velocity.x) > ApproximateZeroVelocity.x;
@@ -28,6 +45,7 @@ public class Platformer2D : MonoBehaviour
     {
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _originalDrag = _rigidBody2D.drag;
     }
 
@@ -42,6 +60,19 @@ public class Platformer2D : MonoBehaviour
         _animator.SetBool(MovingAnimBoolParamName, IsMoving);
         _animator.SetBool(JumpingAnimBoolParamName, IsJumping);
         _animator.SetBool(FallingAnimBoolParamName, IsFalling);
+    }
+
+    private void CreateDust(string animatorStateName, float xOffset = 0f)
+    {
+        if (!Dust) return;
+        float direction = Mathf.Sign(transform.localScale.x);
+        Vector3 position = new Vector3(transform.position.x + direction * xOffset, transform.position.y, transform.position.z);
+        GameObject dust = Instantiate(Dust, position, Quaternion.identity);
+        Vector3 scale = dust.transform.localScale;
+        scale.x = direction * Mathf.Abs(scale.x);
+        dust.transform.localScale = scale;
+        Animator dustAnimator = dust.GetComponent<Animator>();
+        dustAnimator.Play(animatorStateName);
     }
 
     public void FlipXScale(float direction)
@@ -66,5 +97,36 @@ public class Platformer2D : MonoBehaviour
         if (IsJumping || IsFalling) return;
         if (Mathf.Abs(_rigidBody2D.velocity.y) >= MaxVelocity.y) return;
         _rigidBody2D.AddForce(JumpStrength * Vector2.up);
+        CreateDust(JumpingDustAnimStateName);
     }
+
+    #region Animation Events
+    public void OnMovingStart()
+    {
+        CreateDust(MovingStartDustAnimStateName, MovingStartDustOffset);
+    }
+
+    public void OnMoving()
+    {
+        if (AudioEnabled) 
+            AudioManager.Instance.PlaySoundEffectLocally(_audioSource, MovingSoundFXs[Random.Range(0, MovingSoundFXs.Length - 1)]);
+    }
+
+    public void OnStopping()
+    {
+        AudioManager.Instance.PlaySoundEffectLocally(_audioSource, MovingSoundFXs[0]);
+        CreateDust(StoppingDustAnimStateName, StoppingDustOffset);
+    }
+
+    public void OnJumping()
+    {
+        if (AudioEnabled) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, JumpingSoundFX);
+    }
+
+    public void OnLanding()
+    {
+        if (AudioEnabled) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, LandingSoundFX);
+        CreateDust(LandingDustAnimStateName);
+    }
+    #endregion
 }

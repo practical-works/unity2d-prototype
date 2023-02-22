@@ -15,23 +15,39 @@ public class Thrower : MonoBehaviour
     [Header("Auto-Throw")]
     public bool AutoThrow;
     public float AutoThrowDelaySeconds = 1f;
+    [Header("Audio")]
+    public AudioClip ThrowingSoundFX;
 
+    private AudioSource _audioSource;
     private bool _autoThrowing;
 
     public Vector3 ThrowingOrigin => transform.TransformPoint(ThrowingLocalOrigin);
     public Vector3 ScaledThrowingForce => Vector3.Scale(ThrowingForce, transform.localScale.normalized);
 
+    private void Awake() => _audioSource = GetComponent<AudioSource>();
+
     private void Update()
     {
-        //if (AutoThrow)
-        //{
-        //    _autoThrowProjectileCoroutine = AutoThrowProjectile();
-        //    StartCoroutine(_autoThrowProjectileCoroutine);
-        //} else
-        //{
-        //    if (_autoThrowProjectileCoroutine != null) StopCoroutine(_autoThrowProjectileCoroutine);
-        //}
         if (!_autoThrowing && AutoThrow) StartCoroutine(AutoThrowProjectile());
+    }
+
+    private IEnumerator MoveProjectile(GameObject projectile)
+    {
+        while (true)
+        {
+            projectile.transform.position += 0.01f * ScaledThrowingForce;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public void MoveProjectileWithPhysics2D(GameObject projectile)
+    {
+        if (!projectile.TryGetComponent(out Rigidbody2D rigidBody2D))
+        {
+            Debug.LogError($"Could not find {nameof(Rigidbody2D)} component on projectile \"{projectile.name}\"");
+            return;
+        }
+        rigidBody2D.AddForce(100f * ScaledThrowingForce);
     }
 
     public IEnumerator AutoThrowProjectile()
@@ -52,25 +68,11 @@ public class Thrower : MonoBehaviour
         projectile.transform.localScale = ProjectileLocalScale;
         if (UsePhysics2D) MoveProjectileWithPhysics2D(projectile);
         else StartCoroutine(MoveProjectile(projectile));
-    }
-
-    private IEnumerator MoveProjectile(GameObject projectile)
-    {
-        while (true)
+        if (ThrowingSoundFX)
         {
-            projectile.transform.position += 0.01f * ScaledThrowingForce;
-            yield return new WaitForFixedUpdate();
+            if (_audioSource) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, ThrowingSoundFX);
+            else AudioManager.Instance.PlaySoundEffect(ThrowingSoundFX);
         }
-    }
-
-    public void MoveProjectileWithPhysics2D(GameObject projectile)
-    {
-        if (!projectile.TryGetComponent(out Rigidbody2D rigidBody2D))
-        {
-            Debug.LogError($"Could not find {nameof(Rigidbody2D)} component on projectile \"{projectile.name}\"");
-            return;
-        }
-        rigidBody2D.AddForce(100f * ScaledThrowingForce);
     }
 
     private void OnDrawGizmos()

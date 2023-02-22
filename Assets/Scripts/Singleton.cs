@@ -13,7 +13,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     private static T s_instance;
 
-    private void Awake()
+    internal virtual void Awake()
     {
         if (s_instance && s_instance != this)
             Destroy(gameObject);

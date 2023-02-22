@@ -16,12 +16,15 @@ public class Exploder2D : MonoBehaviour
     [Header("Physics")]
     public Vector2 ExplosionForceMin = new(-100, 100);
     public Vector2 ExplosionForceMax = new(100, 300);
+    [Header("Audio")]
+    public AudioClip ExplosionSoundFx;
 
     private SpriteRenderer _spriteRenderer;
 
     [ContextMenu("Explode")]
     public void Explode()
     {
+        if (ExplosionSoundFx) AudioManager.Instance.PlaySoundEffect(ExplosionSoundFx);
         if (DestroyGameObject) Destroy(gameObject);
         for (int i = 0; i < ShrapnelsCount; i++)
         {

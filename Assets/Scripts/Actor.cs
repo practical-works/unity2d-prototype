@@ -11,10 +11,13 @@ public class Actor : MonoBehaviour
     [Min(0)] public float DamageInvincibilitySeconds = 0.5f;
     [Header("Animator")]
     public string DamagedAnimStateName = "Actor_Damaged";
+    [Header("Audio")]
+    public AudioClip HitSoundFX;
 
     private Animator _animator;
     private Exploder2D _exploder;
     private bool _invincible;
+
 
     private void Awake()
     {   
@@ -39,6 +42,7 @@ public class Actor : MonoBehaviour
     private IEnumerator Damage(GameObject _)
     {
         Health--;
+        AudioManager.Instance.PlaySoundEffect(HitSoundFX);
         _animator.Play(DamagedAnimStateName);
         if (Health <= 0)
         {
