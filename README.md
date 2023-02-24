@@ -39,7 +39,7 @@ It features some basic 2D game stuff for unity.
     - [x] **🏹 Automated Projectile Throwing.**
 
 
-- [ ] **🏕️ Environment:**
+- [x] **🏕️ Environment:**
     - [x] **🗺️ Map:**
         - [x] Tile-Mapping _by [Nesting Objects](https://docs.unity3d.com/Manual/Hierarchy.html) (Classic)_.
         - [x] Tile-Mapping _using [TileMap Components](https://docs.unity3d.com/Manual/class-Tilemap.html)_.
@@ -51,9 +51,9 @@ It features some basic 2D game stuff for unity.
     - [x] **💡 Light:**
         - [x] Lighting _using [Light Components](https://docs.unity3d.com/Manual/Lights.html) (3D)_.
         - [x] Lighting _using [Light 2D Components](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/Lights-2D-intro.html) of [Universal Render Pipeline (URP)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/index.html)_.
-    - [ ] **📣 Audio _using [Audio Source Component](https://docs.unity3d.com/Manual/class-AudioSource.html)_:**
-        - [x] Background Music (BGM).
-        - [x] Sound Effects (SFX).
+    - [x] **📣 Audio _using [Audio Source Component](https://docs.unity3d.com/Manual/class-AudioSource.html)_:**
+        - [x] Background Music (BGM) with volume, pitch, and **looping** features _using [Audio Source Play](https://docs.unity3d.com/ScriptReference/AudioSource.Play.html)_.
+        - [x] Sound Effects (SFX) with volume, pitch, and **overlapping** features _using [Audio Source Play One Shot](https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html)_.
         - [x] Distance-Relative Audio _using 3D Sound Settings of [Audio Source Component](https://docs.unity3d.com/Manual/class-AudioSource.html)_.
 
 - [ ] **🔲 User Interface (UI):**

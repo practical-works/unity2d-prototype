@@ -24,7 +24,7 @@ public class Exploder2D : MonoBehaviour
     [ContextMenu("Explode")]
     public void Explode()
     {
-        if (ExplosionSoundFx) AudioManager.Instance.PlaySoundEffect(ExplosionSoundFx);
+        if (ExplosionSoundFx) AudioManager.Instance.PlaySoundFX(ExplosionSoundFx);
         if (DestroyGameObject) Destroy(gameObject);
         for (int i = 0; i < ShrapnelsCount; i++)
         {

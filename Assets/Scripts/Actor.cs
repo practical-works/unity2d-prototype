@@ -42,7 +42,7 @@ public class Actor : MonoBehaviour
     private IEnumerator Damage(GameObject _)
     {
         Health--;
-        AudioManager.Instance.PlaySoundEffect(HitSoundFX);
+        AudioManager.Instance.PlaySoundFX(HitSoundFX);
         _animator.Play(DamagedAnimStateName);
         if (Health <= 0)
         {

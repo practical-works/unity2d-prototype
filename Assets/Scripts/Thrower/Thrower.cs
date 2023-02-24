@@ -70,8 +70,8 @@ public class Thrower : MonoBehaviour
         else StartCoroutine(MoveProjectile(projectile));
         if (ThrowingSoundFX)
         {
-            if (_audioSource) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, ThrowingSoundFX);
-            else AudioManager.Instance.PlaySoundEffect(ThrowingSoundFX);
+            if (_audioSource) AudioManager.Instance.PlaySoundFXLocally(_audioSource, ThrowingSoundFX);
+            else AudioManager.Instance.PlaySoundFX(ThrowingSoundFX);
         }
     }
 

@@ -8,7 +8,7 @@ public class Collectable : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            AudioManager.Instance.PlaySoundEffect(CollectingSoundFX);
+            AudioManager.Instance.PlaySoundFX(CollectingSoundFX);
             Destroy(gameObject);
         }
     }

@@ -109,23 +109,23 @@ public class Platformer2D : MonoBehaviour
     public void OnMoving()
     {
         if (AudioEnabled) 
-            AudioManager.Instance.PlaySoundEffectLocally(_audioSource, MovingSoundFXs[Random.Range(0, MovingSoundFXs.Length - 1)]);
+            AudioManager.Instance.PlaySoundFXLocally(_audioSource, MovingSoundFXs[Random.Range(0, MovingSoundFXs.Length - 1)]);
     }
 
     public void OnStopping()
     {
-        AudioManager.Instance.PlaySoundEffectLocally(_audioSource, MovingSoundFXs[0]);
+        AudioManager.Instance.PlaySoundFXLocally(_audioSource, MovingSoundFXs[0]);
         CreateDust(StoppingDustAnimStateName, StoppingDustOffset);
     }
 
     public void OnJumping()
     {
-        if (AudioEnabled) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, JumpingSoundFX);
+        if (AudioEnabled) AudioManager.Instance.PlaySoundFXLocally(_audioSource, JumpingSoundFX);
     }
 
     public void OnLanding()
     {
-        if (AudioEnabled) AudioManager.Instance.PlaySoundEffectLocally(_audioSource, LandingSoundFX);
+        if (AudioEnabled) AudioManager.Instance.PlaySoundFXLocally(_audioSource, LandingSoundFX);
         CreateDust(LandingDustAnimStateName);
     }
     #endregion

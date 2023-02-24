@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 732684413}
   - component: {fileID: 732684414}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: SoundFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ Transform:
   - {fileID: 566232444}
   - {fileID: 732684413}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5058967202375715614
 Camera:
@@ -435,6 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music: {fileID: 8300000, guid: 3e899274d08e07a41b65b5d39e7595b0, type: 3}
+  AmbientSound: {fileID: 8300000, guid: 52a08e5015f9f9f438c0558a15be335e, type: 3}
+  Voice: {fileID: 0}
 --- !u!114 &8957449281264667467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,3 +449,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae980f6b20bcca44bdcfd534d3d38cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainMusicAudioSourceName: Music
+  _mainSoundFXAudioSourceName: SoundFX
