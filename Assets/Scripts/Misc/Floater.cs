@@ -1,14 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Floater : MonoBehaviour
 {
-    void Update()
+    [field: SerializeField] public Vector3 DistanceScale { get; private set; } = new(0f, 3f, 0f);
+    [field: SerializeField] public Vector3 MotionSpeed { get; private set; } = new(0f, 6f, 0f);
+
+    private Vector3 _initialPosition;
+
+    private void Awake()
     {
-        float x = transform.position.x + Mathf.Cos(Time.deltaTime);
-        float y = transform.position.y;
-        float z = transform.position.z;
-        transform.position = new Vector3(x, y, z);
+        _initialPosition = transform.position;
     }
+
+    private void Update()
+    {
+        transform.position = new Vector3()
+        {
+            x = GetNextCoordinate(_initialPosition.x, DistanceScale.x, MotionSpeed.x),
+            y = GetNextCoordinate(_initialPosition.y, DistanceScale.y, MotionSpeed.y),
+            z = GetNextCoordinate(_initialPosition.z, DistanceScale.z, MotionSpeed.z)
+        };
+    }
+
+    private float GetNextCoordinate(float initialCoordinate, float distanceScale, float motionSpeed) 
+        => initialCoordinate + (Mathf.Lerp(0f, distanceScale, Time.time) * Mathf.Cos(Time.time / 2f * motionSpeed) / 4f);
 }

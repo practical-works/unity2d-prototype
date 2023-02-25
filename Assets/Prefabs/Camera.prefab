@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 5058967202375715587}
   - component: {fileID: 5058967202375715584}
   - component: {fileID: 8957449281264667467}
+  - component: {fileID: 3336561427841278221}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -451,3 +452,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMusicAudioSourceName: Music
   _mainSoundFXAudioSourceName: SoundFX
+  _mute: 0
+  _musicMute: 0
+  _soundFXMute: 0
+  _volume: 0
+  _musicVolume: 0
+  _soundFXVolume: 0
+--- !u!114 &3336561427841278221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058967202375715612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa37ac9139bf814fb5a7f935304c421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HideGUI: 0
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
+  AllMuteKey: 263
+  MusicMuteKey: 260
+  SoundFXMuteKey: 257
+  AllVolumeDownKey: 264
+  MusicVolumeDownKey: 261
+  SoundFXVolumeDownKey: 258
+  AllVolumeUpKey: 265
+  MusicVolumeUpKey: 262
+  SoundFXVolumeUpKey: 259

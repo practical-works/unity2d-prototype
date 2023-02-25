@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812691555}
   - component: {fileID: 812691554}
+  - component: {fileID: 812691556}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -306,6 +307,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812691556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812691553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7353bce09f6f0e143ae6e235d51be12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <DistanceScale>k__BackingField: {x: 5, y: 0, z: 0}
+  <MotionSpeed>k__BackingField: {x: 5, y: 0, z: 0}
 --- !u!1 &1700059119
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +380,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300016, guid: 0409f2fddf07780408257c186ab69681, type: 3}
+  m_Sprite: {fileID: 21300024, guid: 0409f2fddf07780408257c186ab69681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -384,8 +399,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700059119}
   m_LocalRotation: {x: -0, y: -0, z: -0.24302961, w: 0.97001886}
-  m_LocalPosition: {x: -6.06, y: -3.13, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalPosition: {x: -5.88, y: -4.3, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -403,3 +418,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7353bce09f6f0e143ae6e235d51be12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <DistanceScale>k__BackingField: {x: 10, y: 10, z: 0}
+  <MotionSpeed>k__BackingField: {x: 1, y: 6, z: 0}
