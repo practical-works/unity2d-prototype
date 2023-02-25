@@ -1,6 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
@@ -10,22 +10,64 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] private string _mainSoundFXAudioSourceName = "SoundFX";
     private readonly List<AudioSource> _musicAudioSources = new();
     private readonly List<AudioSource> _soundFXAudioSources = new();
-    private float _audioListenerVolumeBeforeMute;
+    [Header("Volume Settings")]
+    [SerializeField] private bool _mute;
+    [SerializeField] private bool _musicMute;
+    [SerializeField] private bool _soundFXMute;
+    [SerializeField][Range(0f, 1f)] private float _volume;
+    [SerializeField][Range(0f, 1f)] private float _musicVolume;
+    [SerializeField][Range(0f, 1f)] private float _soundFXVolume;
 
-    #region Volume Properties
-    public float Volume { get => AudioListener.volume; set => AudioListener.volume = Mathf.Clamp(value, 0f, 1f); }
-    public float MusicVolume { get => _musicAudioSources[0].volume; set => SetVolumeForAudioSources(_musicAudioSources, value); }
-    public float SoundFXVolume { get => _soundFXAudioSources[0].volume; set => SetVolumeForAudioSources(_soundFXAudioSources, value); }
-    #endregion
     #region Mute Properties
-    public bool Mute { get => AudioListener.volume == 0f; set { MuteAudioListener(value); } }
-    public bool MusicMute { get => _musicAudioSources[0].mute; set => SetMuteForAudioSources(_musicAudioSources, value); }
-    public bool SoundFXMute { get => _soundFXAudioSources[0].mute; set => SetMuteForAudioSources(_soundFXAudioSources, value); }
+    public bool Mute
+    {
+        get => GetMuteForAudioSources(_musicAudioSources.Concat(_soundFXAudioSources).ToList());
+        set => SetMuteForAudioSources(_musicAudioSources.Concat(_soundFXAudioSources).ToList(), value);
+    }
+    public bool MusicMute
+    {
+        get => GetMuteForAudioSources(_musicAudioSources);
+        set => SetMuteForAudioSources(_musicAudioSources, value);
+    }
+    public bool SoundFXMute
+    {
+        get => GetMuteForAudioSources(_soundFXAudioSources);
+        set => SetMuteForAudioSources(_soundFXAudioSources, value);
+    }
+    #endregion
+    #region Volume Properties
+    public float Volume
+    {
+        get => AudioListener.volume;
+        set => AudioListener.volume = Mathf.Clamp(value, 0f, 1f);
+    }
+    public float MusicVolume
+    {
+        get => GetVolumeForAudioSources(_musicAudioSources);
+        set => SetVolumeForAudioSources(_musicAudioSources, value);
+    }
+    public float SoundFXVolume
+    {
+        get => GetVolumeForAudioSources(_soundFXAudioSources);
+        set => SetVolumeForAudioSources(_soundFXAudioSources, value);
+    }
     #endregion
     #region Pause Properties
-    public bool Pause { get => AudioListener.pause; set => AudioListener.pause = value; }
-    public bool MusicPause { get => AudioSourceIsPaused(_musicAudioSources[0]); set => SetPauseForAudioSources(_musicAudioSources, value); }
-    public bool SoundFXPause { get => AudioSourceIsPaused(_soundFXAudioSources[0]); set => SetPauseForAudioSources(_soundFXAudioSources, value); }
+    public bool Pause
+    {
+        get => AudioListener.pause;
+        set => AudioListener.pause = value;
+    }
+    public bool MusicPause
+    {
+        get => GetPauseForAudioSources(_musicAudioSources);
+        set => SetPauseForAudioSources(_musicAudioSources, value);
+    }
+    public bool SoundFXPause
+    {
+        get => GetPauseForAudioSources(_soundFXAudioSources);
+        set => SetPauseForAudioSources(_soundFXAudioSources, value);
+    }
     #endregion
     #region Volume Percentage Properties
     public float VolumePercent { get => Mathf.Round(100f * AudioListener.volume); }
@@ -37,7 +79,6 @@ public class AudioManager : Singleton<AudioManager>
     {
         base.Awake();
         RetrieveChildAudioSources();
-        CreateChildAudioSources();
     }
 
     #region Helper Methods
@@ -51,25 +92,21 @@ public class AudioManager : Singleton<AudioManager>
             if (audioSrc.name.Contains(_mainSoundFXAudioSourceName, StringComparison.InvariantCultureIgnoreCase))
                 _soundFXAudioSources.Add(audioSrc);
         }
-    }
-
-    private void CreateChildAudioSources()
-    {
         if (_musicAudioSources.Count == 0)
         {
-            _musicAudioSources.Add(CreateAudioSource(_mainMusicAudioSourceName));
             Debug.LogWarning($"Could not find any child {nameof(AudioSource)} named \"{_mainMusicAudioSourceName}\".");
+            _musicAudioSources.Add(CreateChildAudioSource(_mainMusicAudioSourceName));
             Debug.Log($"Created New child {nameof(AudioSource)} named \"{_mainMusicAudioSourceName}\".");
         }
-        if (_soundFXAudioSources.Count == 0 || !_soundFXAudioSources[0])
+        if (_soundFXAudioSources.Count == 0)
         {
-            _soundFXAudioSources.Add(CreateAudioSource(_mainSoundFXAudioSourceName));
             Debug.LogWarning($"Could not find any child {nameof(AudioSource)} named \"{_mainSoundFXAudioSourceName}\".");
+            _soundFXAudioSources.Add(CreateChildAudioSource(_mainSoundFXAudioSourceName));
             Debug.Log($"Created New child {nameof(AudioSource)} named \"{_mainSoundFXAudioSourceName}\".");
         }
     }
 
-    private AudioSource CreateAudioSource(string name)
+    private AudioSource CreateChildAudioSource(string name)
     {
         GameObject audioSrcGameObj = new(name);
         audioSrcGameObj.transform.SetParent(transform);
@@ -81,9 +118,19 @@ public class AudioManager : Singleton<AudioManager>
         foreach (AudioSource audioSrc in audioSrcList) audioSrc.volume = volume;
     }
 
+    private float GetVolumeForAudioSources(List<AudioSource> audioSrcList)
+    {
+        return audioSrcList.Average(audioSrc => audioSrc.volume);
+    }
+
     private void SetMuteForAudioSources(List<AudioSource> audioSrcList, bool mute)
     {
         foreach (AudioSource audioSrc in audioSrcList) audioSrc.mute = mute;
+    }
+
+    private bool GetMuteForAudioSources(List<AudioSource> audioSrcList)
+    {
+        return audioSrcList.TrueForAll(audioSrc => audioSrc.mute);
     }
 
     private void SetPauseForAudioSources(List<AudioSource> audioSrcList, bool pause)
@@ -95,15 +142,20 @@ public class AudioManager : Singleton<AudioManager>
         }
     }
 
-    private bool AudioSourceIsPaused(AudioSource audioSrc)
+    private bool GetPauseForAudioSources(List<AudioSource> audioSrcList)
     {
-        return !audioSrc.isPlaying && audioSrc.time != 0f;
+        return audioSrcList.TrueForAll(audioSrc => !audioSrc.isPlaying && audioSrc.time != 0f);
     }
 
-    private void MuteAudioListener(bool mute)
+    private AudioSource CreateAudioSource(List<AudioSource> audioSrcList, AudioSource refAudioSrc, AudioClip clip, bool loop)
     {
-        if (AudioListener.volume > 0f) _audioListenerVolumeBeforeMute = AudioListener.volume;
-        AudioListener.volume = mute ? 0f : _audioListenerVolumeBeforeMute;
+        AudioSource audioSrc = refAudioSrc.gameObject.AddComponent<AudioSource>();
+        audioSrcList.Add(audioSrc);
+        audioSrc.volume = refAudioSrc.volume;
+        audioSrc.pitch = refAudioSrc.pitch;
+        audioSrc.clip = clip;
+        audioSrc.loop = loop;
+        return audioSrc;
     }
 
     private void Play(AudioSource audioSrc, AudioClip clip, bool oneshot = false, bool loop = false, float volume = -1f, float pitch = -1f)
@@ -112,13 +164,8 @@ public class AudioManager : Singleton<AudioManager>
         if (pitch >= 0f) audioSrc.pitch = pitch;
         if (oneshot && loop && audioSrc.clip)
         {
-            AudioSource newAudioSrc = audioSrc.gameObject.AddComponent<AudioSource>();
-            _soundFXAudioSources.Add(newAudioSrc);
-            newAudioSrc.volume = audioSrc.volume;
-            newAudioSrc.pitch = audioSrc.pitch;
-            newAudioSrc.clip = clip;
-            newAudioSrc.loop = loop;
-            newAudioSrc.Play();
+            CreateAudioSource(_soundFXAudioSources, audioSrc, clip, loop).Play();
+            OnValidate();
         }
         else if (oneshot && !loop) audioSrc.PlayOneShot(clip);
         else
@@ -147,4 +194,23 @@ public class AudioManager : Singleton<AudioManager>
         if (!_soundFXAudioSources.Contains(localSoundFXSrc)) _soundFXAudioSources.Add(localSoundFXSrc);
         Play(localSoundFXSrc, soundFXClip, oneshot: true, loop, volume, pitch);
     }
+
+    #region Inspector Methods
+    private void Reset()
+    {
+        RetrieveChildAudioSources();
+        _mute = _musicMute = _soundFXMute = false;
+        _volume = _musicVolume = _soundFXVolume = 1f;
+    }
+
+    private void OnValidate()
+    {
+        Mute = _mute;
+        MusicMute = _musicMute | _mute;
+        SoundFXMute = _soundFXMute | _mute;
+        Volume = _volume;
+        MusicVolume = _musicVolume;
+        SoundFXVolume = _soundFXVolume;
+    }
+    #endregion
 }

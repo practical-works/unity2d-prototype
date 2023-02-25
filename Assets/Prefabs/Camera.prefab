@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Music: {fileID: 8300000, guid: 3e899274d08e07a41b65b5d39e7595b0, type: 3}
   AmbientSound: {fileID: 8300000, guid: 52a08e5015f9f9f438c0558a15be335e, type: 3}
-  Voice: {fileID: 0}
+  Voice: {fileID: 8300000, guid: e4bd7c73c3a47964a9ccf723ed692a9d, type: 3}
 --- !u!114 &8957449281264667467
 MonoBehaviour:
   m_ObjectHideFlags: 0
