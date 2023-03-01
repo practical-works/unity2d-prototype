@@ -15,6 +15,7 @@ public class TitleMenu : MonoBehaviour
     public AudioClip VoiceSoundFX;
     public AudioClip CursorSoundFX;
     public AudioClip ConfirmSoundFX;
+    public AudioPlayer BackgroundMusicAudio;
 
     private bool _pendingStartGame;
 

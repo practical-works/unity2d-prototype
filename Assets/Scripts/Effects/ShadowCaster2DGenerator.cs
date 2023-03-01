@@ -75,8 +75,8 @@ public class ShadowCaster2DGeneratorEditor : Editor
 
 public class ShadowCaster2DReflection
 {
-    private ShadowCaster2D _shadowCaster2D;
-    private readonly FieldInfo _applyToSortingLayers;
+    private readonly ShadowCaster2D _shadowCaster2D;
+    //private readonly FieldInfo _applyToSortingLayers;
     private readonly FieldInfo _meshField;
     private readonly FieldInfo _shapePathField;
     private readonly FieldInfo _shapePathHashField;

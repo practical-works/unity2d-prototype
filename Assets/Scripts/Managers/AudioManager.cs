@@ -2,14 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : Singleton<AudioManager>
 {
     [Header("Main Child Audio Sources")]
     [SerializeField] private string _mainMusicAudioSourceName = "Music";
     [SerializeField] private string _mainSoundFXAudioSourceName = "SoundFX";
-    private readonly List<AudioSource> _musicAudioSources = new();
-    private readonly List<AudioSource> _soundFXAudioSources = new();
+    private List<AudioSource> _musicAudioSources = new();
+    private List<AudioSource> _soundFXAudioSources = new();
     [Header("Volume Settings")]
     [SerializeField] private bool _mute;
     [SerializeField] private bool _musicMute;
@@ -18,11 +19,13 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField][Range(0f, 1f)] private float _musicVolume;
     [SerializeField][Range(0f, 1f)] private float _soundFXVolume;
 
+    public List<AudioSource> AudioSources => _musicAudioSources.Concat(_soundFXAudioSources).ToList();
+
     #region Mute Properties
     public bool Mute
     {
-        get => GetMuteForAudioSources(_musicAudioSources.Concat(_soundFXAudioSources).ToList());
-        set => SetMuteForAudioSources(_musicAudioSources.Concat(_soundFXAudioSources).ToList(), value);
+        get => GetMuteForAudioSources(AudioSources);
+        set => SetMuteForAudioSources(AudioSources, value);
     }
     public bool MusicMute
     {
@@ -77,9 +80,13 @@ public class AudioManager : Singleton<AudioManager>
 
     internal override void Awake()
     {
-        base.Awake();
+        base.Awake(); 
         RetrieveChildAudioSources();
     }
+
+    private void OnEnable() => SceneManager.sceneLoaded += (_, _) => ClearNullAudioSources();
+
+    private void OnDisable() => SceneManager.sceneLoaded -= (_, _) => ClearNullAudioSources();
 
     #region Helper Methods
     private void RetrieveChildAudioSources()
@@ -111,6 +118,12 @@ public class AudioManager : Singleton<AudioManager>
         GameObject audioSrcGameObj = new(name);
         audioSrcGameObj.transform.SetParent(transform);
         return audioSrcGameObj.AddComponent<AudioSource>();
+    }
+
+    private void ClearNullAudioSources()
+    {
+        _musicAudioSources = _musicAudioSources.Where(audioSrc => audioSrc != null).ToList();
+        _soundFXAudioSources = _soundFXAudioSources.Where(audioSrc => audioSrc != null).ToList();
     }
 
     private void SetVolumeForAudioSources(List<AudioSource> audioSrcList, float volume)
@@ -160,6 +173,8 @@ public class AudioManager : Singleton<AudioManager>
 
     private AudioSource Play(AudioSource audioSrc, AudioClip clip, bool oneshot = false, bool loop = false, float volume = -1f, float pitch = -1f)
     {
+        float originalVolume = audioSrc.volume;
+        float originalPitch = audioSrc.pitch;
         if (volume >= 0f) audioSrc.volume = volume;
         if (pitch >= 0f) audioSrc.pitch = pitch;
         if (oneshot && loop && audioSrc.clip)
@@ -167,6 +182,8 @@ public class AudioManager : Singleton<AudioManager>
             AudioSource newAudioSrc = CreateAudioSource(_soundFXAudioSources, audioSrc, clip, loop);
             newAudioSrc.Play();
             OnValidate();
+            newAudioSrc.volume = originalVolume;
+            newAudioSrc.pitch = originalPitch;
             return newAudioSrc;
         }
         else if (oneshot && !loop) audioSrc.PlayOneShot(clip);
@@ -176,6 +193,8 @@ public class AudioManager : Singleton<AudioManager>
             audioSrc.loop = loop;
             audioSrc.Play();
         }
+        audioSrc.volume = originalVolume;
+        audioSrc.pitch = originalPitch;
         return audioSrc;
     }
     #endregion
@@ -200,21 +219,21 @@ public class AudioManager : Singleton<AudioManager>
 
     public AudioSource ResumeClip(AudioClip clip)
     {
-        AudioSource audioSrc = _musicAudioSources.Concat(_soundFXAudioSources).ToList().Find(audioSrc => audioSrc.clip == clip);
+        AudioSource audioSrc = AudioSources.Find(audioSrc => audioSrc.clip == clip);
         audioSrc.UnPause();
         return audioSrc;
     }
 
     public AudioSource PauseClip(AudioClip clip)
     {
-        AudioSource audioSrc = _musicAudioSources.Concat(_soundFXAudioSources).ToList().Find(audioSrc => audioSrc.clip == clip);
+        AudioSource audioSrc = AudioSources.Find(audioSrc => audioSrc.clip == clip);
         audioSrc.Pause();
         return audioSrc;
     }
 
     public AudioSource StopClip(AudioClip clip)
     {
-        AudioSource audioSrc = _musicAudioSources.Concat(_soundFXAudioSources).ToList().Find(audioSrc => audioSrc.clip == clip);
+        AudioSource audioSrc = AudioSources.Find(audioSrc => audioSrc.clip == clip);
         audioSrc.Stop();
         return audioSrc;
     }
