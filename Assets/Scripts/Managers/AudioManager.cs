@@ -84,9 +84,9 @@ public class AudioManager : Singleton<AudioManager>
         RetrieveChildAudioSources();
     }
 
-    private void OnEnable() => SceneManager.sceneLoaded += (_, _) => ClearNullAudioSources();
+    //private void OnEnable() => SceneManager.sceneLoaded += (_, _) => ClearNullAudioSources();
 
-    private void OnDisable() => SceneManager.sceneLoaded -= (_, _) => ClearNullAudioSources();
+    //private void OnDisable() => SceneManager.sceneLoaded -= (_, _) => ClearNullAudioSources();
 
     #region Helper Methods
     private void RetrieveChildAudioSources()
@@ -246,7 +246,7 @@ public class AudioManager : Singleton<AudioManager>
         _volume = _musicVolume = _soundFXVolume = 1f;
     }
 
-    private void OnValidate()
+    internal override void OnValidate()
     {
         Mute = _mute;
         MusicMute = _musicMute | _mute;

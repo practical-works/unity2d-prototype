@@ -6,7 +6,7 @@ public class AudioManagerDebugGUI : Singleton<AudioManagerDebugGUI>
     public bool EnableControl = true;
     [Header("GUI")]
     public Color TextColor = Color.white;
-    public Rect PositionPixels = new Rect(x: 10f, y: 10f, width: 200f, height: 20f);
+    public Rect PositionPixels = new(x: 10f, y: 10f, width: 200f, height: 20f);
     [Header("Control Keys")]
     public KeyCode AllMuteKey = KeyCode.Keypad7;
     public KeyCode MusicMuteKey = KeyCode.Keypad4;

@@ -5,13 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class AudioPlayer
 {
-    private static GameObject s_audioGameObject;
+    private static AudioPlayerContainer s_audioPlayerContainer;
     [SerializeField] private AudioClip[] _audioClips;
     [SerializeField, EnumPaging] private PlaybackMode _playbackMode;
     [SerializeField, ToggleLeft] private bool _interruptOnPlay;
     [SerializeField, FoldoutGroup(nameof(Volume)), ToggleLeft] private bool _randomizeVolume;
     [SerializeField, FoldoutGroup(nameof(Pitch)), ToggleLeft] private bool _randomizePitch;
-    [SerializeField, FoldoutGroup(nameof(Volume)), MinMaxSlider(0f, 1f), ShowIf(nameof(_randomizeVolume))] 
+    [SerializeField, FoldoutGroup(nameof(Volume)), MinMaxSlider(0f, 1f), ShowIf(nameof(_randomizeVolume))]
     private Vector2 _volumeRange = new(0.5f, 1f);
     [SerializeField, FoldoutGroup(nameof(Pitch)), MinMaxSlider(-3f, 3f), ShowIf(nameof(_randomizePitch))]
     private Vector2 _pitchRange = new(-1f, 1f);
@@ -26,13 +26,9 @@ public class AudioPlayer
         {
             if (!_audioSource)
             {
-                if (!s_audioGameObject)
-                {
-                    s_audioGameObject = new GameObject($"{nameof(AudioPlayer)}s");
-                    // Must find a way to make sure there's no duplicates of this in the scene
-                }
+                if (!s_audioPlayerContainer) s_audioPlayerContainer = AudioPlayerContainer.Instance;
                 GameObject audioPlayerGameObj = new(nameof(AudioPlayer));
-                audioPlayerGameObj.transform.SetParent(s_audioGameObject.transform);
+                audioPlayerGameObj.transform.SetParent(s_audioPlayerContainer.transform);
                 _audioSource = audioPlayerGameObj.AddComponent<AudioSource>();
             }
             return _audioSource;
@@ -43,7 +39,8 @@ public class AudioPlayer
     private bool IsStopped => !AudioSource.clip && !AudioSource.isPlaying && AudioSource.time <= 0f;
     private bool IsPlaying => AudioSource.isPlaying;
     [ShowInInspector] private AudioClip CurrentAudioClip => AudioSource.clip;
-    [ShowInInspector, FoldoutGroup(nameof(Volume)), PropertyRange(0f, 1f), DisableIf(nameof(_randomizeVolume))] 
+    [ShowInInspector] private string Container => s_audioPlayerContainer != null ? s_audioPlayerContainer.name : null;
+    [ShowInInspector, FoldoutGroup(nameof(Volume)), PropertyRange(0f, 1f), DisableIf(nameof(_randomizeVolume))]
     private float Volume
     {
         get => AudioSource.volume;
@@ -123,8 +120,6 @@ public class AudioPlayer
         AudioSource.Stop();
         AudioSource.name = nameof(AudioPlayer);
         AudioSource.clip = null;
-        AudioSource.volume = 1f;
-        AudioSource.pitch = 1f;
     }
 
     private IEnumerator<AudioClip> GetCyclicPlayer()
