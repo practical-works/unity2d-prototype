@@ -10,20 +10,19 @@ public class TitleMenu : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI StartGameText;
     [Header("Audio")]
-    public AudioClip BackgroundMusic;
-    public AudioClip AmbientSoundFX;
-    public AudioClip VoiceSoundFX;
-    public AudioClip CursorSoundFX;
-    public AudioClip ConfirmSoundFX;
-    public AudioPlayer BackgroundMusicAudio;
+    public AudioPlayer BackgroundMusic;
+    public AudioPlayer AmbientSoundFX;
+    public AudioPlayer VoiceSoundFX;
+    public AudioPlayer CursorSoundFX;
+    public AudioPlayer ConfirmSoundFX;
 
     private bool _pendingStartGame;
 
     private void Awake()
     {
-        if (BackgroundMusic) AudioManager.Instance.PlayMusic(BackgroundMusic, loop: true);
-        if (AmbientSoundFX) AudioManager.Instance.PlaySoundFX(AmbientSoundFX, loop: true);
-        if (VoiceSoundFX) AudioManager.Instance.PlaySoundFX(VoiceSoundFX, loop: true);
+        BackgroundMusic.Play();
+        AmbientSoundFX.Play();
+        VoiceSoundFX.Play();
     }
 
     void Update()
@@ -36,18 +35,13 @@ public class TitleMenu : MonoBehaviour
     {
         if (_pendingStartGame) yield break;
         _pendingStartGame = true;
-        yield return new WaitForSeconds(PlayConfirmSoundFX());
+        StartGameText.enabled = false;
+        BackgroundMusic.Stop();
+        AmbientSoundFX.Stop();
+        VoiceSoundFX.Stop();
+        ConfirmSoundFX.Play();
+        yield return new WaitWhile(() => ConfirmSoundFX.IsPlaying);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         _pendingStartGame = false;
-    }
-
-    private float PlayConfirmSoundFX()
-    {
-        if (!ConfirmSoundFX) return 1f;
-        float pitch = 0.3f;
-        StartGameText.enabled = false;
-        AudioManager.Instance.StopClip(BackgroundMusic);
-        AudioManager.Instance.PlaySoundFX(ConfirmSoundFX, false, -1, pitch);
-        return ConfirmSoundFX.length / pitch;
     }
 }

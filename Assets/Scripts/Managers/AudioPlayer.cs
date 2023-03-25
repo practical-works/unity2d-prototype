@@ -37,7 +37,7 @@ public class AudioPlayer
     private bool IsPlayable => (_audioClips.Length > 0) && (_interruptOnPlay || !IsPlaying);
     private bool IsPaused => AudioSource.clip && !AudioSource.isPlaying && AudioSource.time > 0f;
     private bool IsStopped => !AudioSource.clip && !AudioSource.isPlaying && AudioSource.time <= 0f;
-    private bool IsPlaying => AudioSource.isPlaying;
+    public bool IsPlaying => AudioSource.isPlaying;
     [ShowInInspector] private AudioClip CurrentAudioClip => AudioSource.clip;
     [ShowInInspector] private string Container => s_audioPlayerContainer != null ? s_audioPlayerContainer.name : null;
     [ShowInInspector, FoldoutGroup(nameof(Volume)), PropertyRange(0f, 1f), DisableIf(nameof(_randomizeVolume))]
@@ -82,7 +82,7 @@ public class AudioPlayer
     }
 
     [ButtonGroup, DisableIf(nameof(IsStopped))]
-    private void Stop()
+    public void Stop()
     {
         EndPlayback();
         _cyclicPlayer = GetCyclicPlayer();

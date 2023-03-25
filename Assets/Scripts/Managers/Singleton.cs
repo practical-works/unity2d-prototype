@@ -13,7 +13,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if (!s_instance)
             {
                 s_instance = FindObjectOfType<T>();
-                if (s_instance) s_instance.name = $"${s_instance.name}";
+                if (s_instance) s_instance.name = $"{s_instance.name}";
                 else s_instance = new GameObject($"${typeof(T).Name}").AddComponent<T>();
             }
             return s_instance;
